@@ -1,0 +1,38 @@
+.sobre-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-left: 120px;
+    margin-right: 120px;
+    max-width: 1200px;
+}
+.realce{
+    color: black;
+}
+
+
+@media(max-width:800px){
+    
+    .sobre-container{
+        margin-left: 0px;
+        margin-right: 0px;
+        grid-template-columns: 1fr;
+        justify-items: center;
+}
+    .sobre-container h2{
+        color: white;
+    }
+    .sobre-paragrafo{
+        text-align: center;
+        max-width: 500px;
+        color: white;
+    }
+    .sobre{
+        background-color: var(--cor2);
+    }
+
+}
+@media (max-width:400px){
+    .sobre-paragrafo{
+        max-width: 300px;}
+}

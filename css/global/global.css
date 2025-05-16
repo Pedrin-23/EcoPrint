@@ -7,15 +7,8 @@
 }
 
 html, body {
-  height: 100%;
   font-family: "Red Hat Display",sans-serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  text-rendering: optimizeSpeed;
+  margin: 0;
 }
 
 img, picture, video, canvas, svg {
@@ -36,10 +29,6 @@ ul, ol {
   list-style: none;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 
 html{
     background-color: #D1E5DA;
