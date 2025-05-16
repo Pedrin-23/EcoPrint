@@ -1,5 +1,9 @@
 
-
+.cabecalho-container img {
+    max-width: 100%;
+    display: block;
+    min-width: 100px;
+}
 
 .cabecalho-container {
     display: flex;
@@ -7,6 +11,7 @@
     color: var(--cor3);
     margin-left: 120px;
     margin-right: 120px;
+
 }
 .cabecalho-container ul{
     display: flex;
@@ -55,6 +60,8 @@ max-height: 50.4px
     display: block;
     gap: 40px;
     justify-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
 }
     .cabecalho-container ul {
         display: block;
@@ -63,5 +70,22 @@ max-height: 50.4px
     }
     .cabecalho-container ul li+li{
         margin-top: 20px;
+    }
+}
+@media(max-width:400px){
+    .cabecalho-botao-principal , .cabecalho-botao-secundario {
+        font-size: 0.75rem;
+    }
+    .cabecalho-botao-principal a{
+    background-color: var(--cor3);
+    color: #D1E5DA;
+    padding: 2.5px 5px;
+    border-radius: 5px;
+}
+    .cabecalho-container img {
+    place-self: center;
+    }
+    .cabecalho-container ul {
+        place-items: center;
     }
 }

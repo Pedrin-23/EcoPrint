@@ -2,4 +2,5 @@
 @import url("../global/global.css");
 @import url("../global/tipografia.css");
 @import url("../global/utiltarios.css");
-@import url("../header/header.css");
+@import url("../pagina-principal/header.css");
+@import url("../pagina-principal/main.css");
