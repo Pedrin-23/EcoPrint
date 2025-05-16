@@ -13,7 +13,12 @@ font-family: 'Red Hat Display' , sans-serif;
 font-weight: 400;
 font-size: 1.25rem;
 }
-
+.t-titulo-p{
+font-family: 'Red Hat Display' , sans-serif;
+font-weight: 400;
+font-size: 4rem;
+text-align: center;
+}
 
 @media(max-width:800px){
     .t-titulo-s{

@@ -1,0 +1,16 @@
+.dados-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-left: 120px;
+    margin-right: 120px;
+    max-width: 1200px;
+    align-items: center;
+}
+.dados-container img {
+    scale: 0.75;
+    grid-row: 1;
+}
+.dados {
+    background-color: #1a1a1a;
+}
