@@ -14,3 +14,14 @@
 .dados {
     background-color: #1a1a1a;
 }
+@media(max-width:600px){
+    .dados-container{
+        margin-left: 0px;
+        margin-right: 0px;
+        grid-template-columns: 1fr;
+    }
+    .dados-container img{
+        grid-row: 2;
+    }
+
+}
