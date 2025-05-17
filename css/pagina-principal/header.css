@@ -62,6 +62,8 @@ max-height: 50.4px
     justify-items: center;
     margin-left: 0px;
     margin-right: 0px;
+    padding-right: 0;
+    padding-left: 0;
 }
 .cabecalho-botao-secundario a{
     display: inline-block;
@@ -84,11 +86,8 @@ max-height: 50.4px
     .cabecalho-container ul li+li{
         margin-top: 20px;
     }
-}
-@media(max-width:600px){
-    .cabecalho-container{
-        margin-left: 0px;
-        margin-right: 0px;
+    .cabecalho-container {
+        place-items: center;
     }
 }
 @media(max-width:400px){
@@ -104,7 +103,5 @@ max-height: 50.4px
     .cabecalho-container img {
     place-self: center;
     }
-    .cabecalho-container ul {
-        place-items: center;
-    }
+
 }
