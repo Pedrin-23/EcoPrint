@@ -9,7 +9,12 @@
 .realce{
     color: black;
 }
-
+@media(max-width:1000px){
+    
+    .sobre-container{
+        grid-template-columns: 1fr;
+        justify-items: center;
+}}
 
 @media(max-width:800px){
     
