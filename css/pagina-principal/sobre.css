@@ -13,8 +13,11 @@
     
     .sobre-container{
         grid-template-columns: 1fr;
-        justify-items: center;
-}}
+        justify-items: center;}
+     .sobre-paragrafo {
+        margin-bottom: 40px;
+    }
+}
 
 @media(max-width:800px){
     
@@ -36,9 +39,7 @@
         background-color: var(--cor2);
         
     }
-    .sobre-paragrafo {
-        margin-bottom: 40px;
-    }
+   
 
 }
 @media (max-width:450px){
