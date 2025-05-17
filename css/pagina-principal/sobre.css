@@ -34,6 +34,9 @@
     }
     .sobre{
         background-color: var(--cor2);
+        
+    }
+    .sobre-paragrafo {
         margin-bottom: 40px;
     }
 
