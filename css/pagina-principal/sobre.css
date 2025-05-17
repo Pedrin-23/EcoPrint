@@ -34,6 +34,7 @@
     }
     .sobre{
         background-color: var(--cor2);
+        margin-bottom: 40px;
     }
 
 }
