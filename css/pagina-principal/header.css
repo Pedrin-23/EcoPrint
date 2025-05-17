@@ -85,6 +85,12 @@ max-height: 50.4px
         margin-top: 20px;
     }
 }
+@media(max-width:600px){
+    .cabecalho-container{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
 @media(max-width:400px){
     .cabecalho-botao-principal , .cabecalho-botao-secundario {
         font-size: 0.75rem;

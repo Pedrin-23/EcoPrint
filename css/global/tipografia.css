@@ -19,6 +19,11 @@ font-weight: 400;
 font-size: 4rem;
 text-align: center;
 }
+.t-botao{
+font-family: 'Red Hat Display';
+font-weight: 700;
+font-size: 2.5rem;
+}
 
 @media(max-width:800px){
     .t-titulo-s{
