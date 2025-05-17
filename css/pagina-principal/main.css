@@ -10,7 +10,7 @@
 }
 .principal-titulo::before{
 content: "";
-background-image: url(../../img/details/detalhe.svg);
+background-image: url(../../img/details\detalhe.svg);
 position: absolute;
 left : 30px;
 top : 0px;
