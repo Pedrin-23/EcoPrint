@@ -24,6 +24,11 @@ font-family: 'Red Hat Display';
 font-weight: 700;
 font-size: 2.5rem;
 }
+.t-alternativas{
+font-family: 'Red Hat Display';
+font-weight: 700;
+font-size: 1.5rem;
+}
 
 @media(max-width:800px){
     .t-titulo-s{
