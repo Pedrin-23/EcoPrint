@@ -66,8 +66,6 @@ function desmarcarRadios() {
   const radios = document.querySelectorAll(".input");
   radios.forEach((radio) => {
     radio.checked = false;
-    radio.type = "checkbox";
-    radio.type = "radio";
   });
 }
 function armazenar() {
@@ -100,18 +98,118 @@ function trocar() {
         botao_troca.style.display = "none";
         botao_resultado.style.display = "initial";
       }
-      console.log(cont);
+      console.log(respostas);
     }
   });
+}
+function calcular_resposta(respostas) {
+  let pontuacao = 0;
+
+  const pontuacoes = [
+    {
+      // Questão 1
+      "Carro sozinho": 5,
+      "Carro com carona": 3,
+      "Transporte público": 2,
+    },
+    {
+      // Questão 2
+      Diariamente: 5,
+      "3 a 5 vezes por semana": 3,
+      "1 a 2 vezes por semana": 2,
+    },
+    {
+      // Questão 3
+      Alta: 5,
+      Média: 3,
+      Baixa: 2,
+    },
+    {
+      // Questão 4
+      "Não reciclo nada": 5,
+      "Reciclo papel ou plástico": 3,
+      "Reciclo quase tudo": 2,
+    },
+    {
+      // Questão 5
+      "Toda semana": 5,
+      "Todo mês": 3,
+      "A cada 2-3 meses": 2,
+    },
+  ];
+
+  for (let i = 0; i < respostas.length; i++) {
+    const resposta = respostas[i];
+    pontuacao += pontuacoes[i][resposta] || 0;
+  }
+
+  return pontuacao;
+}
+function posicionar_resposta() {
+  // SUMINDO COM O CONTAINER ANTIGO E APARECENDO O NOVO
+  const container_p = document.querySelector(".perguntas-container");
+  const container_f = document.querySelector(".final");
+  container_p.style.display = "initial";
+  container_f.style.display = "grid";
+  container_perguntas.style.display = "none";
+  sliders.style.display = "none";
+  botao_resultado.style.display = "none";
+  //
+  //Pegando variaveis
+  let texto = document.querySelector(".avaliacao");
+  let nota = document.querySelector(".avaliacao_nota");
+  let frase = document.querySelector(".avaliacao_frase");
+  let imagem_avaliacao = document.querySelector(".imagem_avaliacao");
+
+  const resposta = calcular_resposta(respostas);
+  if (resposta <= 5) {
+    texto.style.color = "#2E7D32";
+    nota.style.color = "#4CAF50";
+    texto.innerHTML = "EXCELENTE";
+    nota.innerHTML = resposta.toString() + "/25";
+    frase.innerHTML =
+      "Você adota práticas altamente sustentáveis no dia a dia. Continue assim!";
+    imagem_avaliacao.src = "img/img-body/excelente_emoji.svg";
+  } else if (resposta <= 10) {
+    texto.style.color = "#2E7D32";
+    nota.style.color = "#81C784";
+    texto.innerHTML = "BOM";
+    nota.innerHTML = resposta.toString() + "/25";
+    frase.innerHTML =
+      "Seus hábitos são positivos para o meio ambiente, mas ainda há pequenas melhorias possíveis.";
+    imagem_avaliacao.src = "img/img-body/bom-emoji.svg";
+  } else if (resposta <= 15) {
+    texto.style.color = "#FBC02D";
+    nota.style.color = "#F9A825";
+    texto.innerHTML = "MÉDIO";
+    nota.innerHTML = resposta.toString() + "/25";
+    frase.innerHTML =
+      "Algumas escolhas sustentáveis são feitas, mas há espaço para mudanças que reduzam seu impacto.";
+    imagem_avaliacao.src = "img/img-body/medio_emoji.svg";
+  } else if (resposta <= 20) {
+    texto.style.color = "#C62828";
+    nota.style.color = "#F44336";
+    texto.innerHTML = "RUIM";
+    nota.innerHTML = resposta.toString() + "/25";
+    frase.innerHTML =
+      "É importante repensar certos hábitos e buscar alternativas mais sustentáveis.";
+    imagem_avaliacao.src = "img/img-body/ruim_emoji.svg";
+  } else {
+    texto.style.color = "#C62828";
+    nota.style.color = "#F44336";
+    texto.innerHTML = "MUITO RUIM";
+    nota.innerHTML = resposta.toString() + "/25";
+    frase.innerHTML =
+      "Seus hábitos causam grande impacto no meio ambiente. Tente adotar atitudes mais ecológicas.";
+    imagem_avaliacao.src = "img/img-body/ruim_emoji.svg";
+  }
 }
 function results() {
   //Sumindo com o site
   radio_selecionado.forEach((radio) => {
     if (radio.checked) {
       armazenar();
-      container_perguntas.style.display = "none";
-      sliders.style.display = "none";
-      botao_resultado.style.display = "none";
+      posicionar_resposta();
       //
     }
   });

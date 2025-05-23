@@ -1,6 +1,7 @@
 .perguntas-container {
   margin-left: 120px;
   margin-right: 120px;
+  max-width: 1200px;
 }
 .perguntas-span-label {
   align-items: center;
@@ -44,9 +45,9 @@
 }
 .perguntas-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
 }
-.perguntas-container img {
+.perguntas-container .imagem {
 place-self: center;
 max-width: 500px;
 max-height: 500px;
@@ -87,8 +88,6 @@ transform: translateX(10px);
   background-color: var(--cor4);
   border: none;
   justify-self: center;
-  background-position: center;
-  background-repeat: no-repeat;
   cursor: pointer;
   padding: 5px 10px;
   color: white;
@@ -99,6 +98,7 @@ transform: translateX(10px);
 .ver_resultado:hover{
   background-color: #505f4f;
 }
+
 @media(max-width:900px){
   .perguntas-container{
     grid-template-columns: 1fr;

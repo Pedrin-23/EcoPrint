@@ -103,5 +103,5 @@ max-height: 50.4px
     .cabecalho-container img {
     place-self: center;
     }
-
+    .cabecalho-container ul {padding-left: 0px;}
 }

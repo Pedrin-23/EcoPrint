@@ -35,4 +35,7 @@
     .rodape-container img {
         display: none;
     }
+    .rodape-container {
+        margin: 0px;
+    }
 }
