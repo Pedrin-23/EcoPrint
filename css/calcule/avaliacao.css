@@ -4,6 +4,7 @@
     margin-right: 120px;
     margin-left: 120px;
     max-width: 1200px;
+
 }
 .avaliacao{
     margin: 0px;
@@ -46,11 +47,18 @@
     .botao_voltar{
          grid-column: initial;
     }
+    .final{
+        place-self: center;
+    }
+    
     
 }
 @media (max-width:400px){
     .final{
         margin:0px;
+    }
+    .final p {
+        font-size: 1rem;
     }
     .avaliacao_frase {
         max-width: 200px;

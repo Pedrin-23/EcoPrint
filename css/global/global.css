@@ -30,8 +30,17 @@ ul, ol {
 }
 
 
-html{
-    background-color: #D1E5DA;
+.fundo_personalizado{
+    background: url("../../img/test/backgroundtest.svg") no-repeat center center fixed;
+     -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+html {
+  background: linear-gradient(135deg, #D1E5DA, #A8CBB7);
+
 }
 .container {
     max-width: 1200px;

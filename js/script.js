@@ -160,48 +160,63 @@ function posicionar_resposta() {
   let nota = document.querySelector(".avaliacao_nota");
   let frase = document.querySelector(".avaliacao_frase");
   let imagem_avaliacao = document.querySelector(".imagem_avaliacao");
+  function atualizarLottie(src) {
+    let container_lottie =
+      document.querySelector(".imagem_avaliacao").parentElement;
+    let imagem_antiga = document.querySelector(".imagem_avaliacao");
+    imagem_antiga.remove();
 
+    let novo_lottie = document.createElement("lottie-player");
+    novo_lottie.className = "imagem_avaliacao";
+    novo_lottie.setAttribute("src", src);
+    novo_lottie.setAttribute("background", "transparent");
+    novo_lottie.setAttribute("speed", "0.5");
+    novo_lottie.setAttribute("style", "width: 300px; height: 300px");
+    novo_lottie.setAttribute("loop", "");
+    novo_lottie.setAttribute("autoplay", "");
+    container_lottie.appendChild(novo_lottie);
+  }
   const resposta = calcular_resposta(respostas);
   if (resposta <= 5) {
     texto.style.color = "#2E7D32";
     nota.style.color = "#4CAF50";
     texto.innerHTML = "EXCELENTE";
-    nota.innerHTML = resposta.toString() + "/25";
+    nota.innerHTML = resposta.toString();
     frase.innerHTML =
       "Você adota práticas altamente sustentáveis no dia a dia. Continue assim!";
-    imagem_avaliacao.src = "img/img-body/excelente_emoji.svg";
+    atualizarLottie("json/great.json");
   } else if (resposta <= 10) {
     texto.style.color = "#2E7D32";
     nota.style.color = "#81C784";
     texto.innerHTML = "BOM";
-    nota.innerHTML = resposta.toString() + "/25";
+    nota.innerHTML = resposta.toString();
     frase.innerHTML =
       "Seus hábitos são positivos para o meio ambiente, mas ainda há pequenas melhorias possíveis.";
-    imagem_avaliacao.src = "img/img-body/bom-emoji.svg";
+    atualizarLottie("json/good.json");
   } else if (resposta <= 15) {
     texto.style.color = "#FBC02D";
     nota.style.color = "#F9A825";
     texto.innerHTML = "MÉDIO";
-    nota.innerHTML = resposta.toString() + "/25";
+    nota.innerHTML = resposta.toString();
     frase.innerHTML =
       "Algumas escolhas sustentáveis são feitas, mas há espaço para mudanças que reduzam seu impacto.";
-    imagem_avaliacao.src = "img/img-body/medio_emoji.svg";
+    atualizarLottie("json/meh.json");
   } else if (resposta <= 20) {
     texto.style.color = "#C62828";
     nota.style.color = "#F44336";
     texto.innerHTML = "RUIM";
-    nota.innerHTML = resposta.toString() + "/25";
+    nota.innerHTML = resposta.toString();
     frase.innerHTML =
       "É importante repensar certos hábitos e buscar alternativas mais sustentáveis.";
-    imagem_avaliacao.src = "img/img-body/ruim_emoji.svg";
+    atualizarLottie("json/bad.json");
   } else {
     texto.style.color = "#C62828";
     nota.style.color = "#F44336";
     texto.innerHTML = "MUITO RUIM";
-    nota.innerHTML = resposta.toString() + "/25";
+    nota.innerHTML = resposta.toString();
     frase.innerHTML =
       "Seus hábitos causam grande impacto no meio ambiente. Tente adotar atitudes mais ecológicas.";
-    imagem_avaliacao.src = "img/img-body/ruim_emoji.svg";
+    atualizarLottie("json/bad.json");
   }
 }
 function results() {

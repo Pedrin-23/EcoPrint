@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" class="fundo_personalizado">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CALCULE | ECOPRINT</title>
     <link rel="stylesheet" href="css/global/style.css" />
+    <link rel="shortcut icon" href="img/details/logo.svg" type="image/x-icon" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
     <header class="cabecalho">
@@ -28,27 +30,30 @@
     <main class="perguntas">
       <div class="perguntas-container container">
         <div class="final">
-          <div class="avaliacao_container">
+          <div class="avaliacao_container caixa-destaque">
             <h1 class="avaliacao t-titulo-p cor-1">EXCELENTE</h1>
             <p class="avaliacao_nota t-titulo-p">00</p>
-            <p class="avaliacao_frase t-paragrafo cor-2">
+            <p class="avaliacao_frase t-paragrafo cor-3">
               Seus hábitos causam grande impacto no meio ambiente. Tente adotar
               atitudes mais ecológicas.
             </p>
+            <a href="index.html" class="botao_voltar">Voltar</a>
           </div>
-          <img
-            src="img/img-body/ruim_emoji.svg"
-            alt=""
-            class="imagem_avaliacao"
-            height="200px"
-          />
-          <a href="index.html" class="botao_voltar">Voltar</a>
+          <lottie-player class="imagem_avaliacao"
+            src="/json/meh.json"
+            background="transparent"
+            speed="0.5"
+            style="width: 300px; height: 300px"
+            loop
+            autoplay
+          >
+          </lottie-player>
         </div>
-        <div class="sumir">
-          <h1 class="perguntas-p t-titulo-p cor-1">
+        <div class="sumir caixa-destaque">
+          <h1 class="perguntas-p t-titulo-p cor-6">
             Qual é o seu meio de transporte mais utilizado durante a semana?
           </h1>
-          <div class="perguntas-alternativas t-alternativas cor-2">
+          <div class="perguntas-alternativas t-alternativas cor-3">
             <div class="perguntas-span-label">
               <label>
                 <input
@@ -88,7 +93,7 @@
               </label>
             </div>
 
-            <div class="perguntas-span-label">
+            <div class="perguntas-span-label label_especial">
               <label>
                 <input
                   class="input alternativa_value4"
@@ -99,6 +104,8 @@
                 <span></span>
                 <p class="alternativa_4">Bicicleta ou Caminhada</p>
               </label>
+              <button class="action_button"></button>
+              <button class="ver_resultado"></button>
             </div>
           </div>
         </div>
@@ -108,8 +115,6 @@
           alt="Ilustração de transporte"
           height="300px"
         />
-        <button class="action_button"></button>
-        <button class="ver_resultado">RESULTADO</button>
       </div>
     </main>
     <footer class="rodape">
