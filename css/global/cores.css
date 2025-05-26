@@ -19,6 +19,9 @@
 .cor-7{
     color: #2E7D32;
 }
+.cor-8{
+    color:white;
+}
 :root{
     --cor1: #334556;
     --cor2: #575757;

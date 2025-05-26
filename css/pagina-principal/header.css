@@ -65,19 +65,17 @@ max-height: 50.4px
     padding-right: 0;
     padding-left: 0;
 }
+.cabecalho-container nav {
+    place-items: center;
+}
 .cabecalho-botao-secundario a{
-    display: inline-block;
-    font-size: 1.25rem;
-    background-color: var(--cor3);
-    color: #D1E5DA;
-    padding: 5px 10px;
-    border-radius: 5px;
-
+    display: none;
 
 }
 .cabecalho-botao-secundario a::after{
     display: none;
 }
+.cabecalho-container ul {padding-left: 0px;}
     .cabecalho-container ul {
         display: block;
         justify-items: center;
