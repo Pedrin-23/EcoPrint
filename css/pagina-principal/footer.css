@@ -13,7 +13,7 @@
     scale:1.5;
     
 }
-.rodape-container p {
+.rodape-container p , a {
     font-size: 1rem;
     text-align: center;
     color: gray;
@@ -25,9 +25,11 @@
 .rodape-container img, .rodape-container div {
     margin-top: 40px;
 }
-.copyright{
-    grid-column: 1/-1;
+.rodape-container a {
+padding: 20px;
+text-decoration: underline;
 }
+
 @media(max-width:600px){
     .rodape-container{
         grid-template-columns: 1fr;

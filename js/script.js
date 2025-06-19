@@ -108,33 +108,37 @@ function calcular_resposta(respostas) {
   const pontuacoes = [
     {
       // Questão 1
-      "Carro sozinho": 5,
-      "Carro com carona": 3,
-      "Transporte público": 2,
+      "Carro sozinho": 240,
+      "Carro com carona": 120,
+      "Transporte público": 60,
     },
     {
       // Questão 2
-      Diariamente: 5,
-      "3 a 5 vezes por semana": 3,
-      "1 a 2 vezes por semana": 2,
+      Diariamente: 240,
+      "3 a 5 vezes por semana": 135,
+      "1 a 2 vezes por semana": 75,
+      "Raramente ou nunca": 10,
     },
     {
       // Questão 3
-      Alta: 5,
-      Média: 3,
-      Baixa: 2,
+      Alta: 60,
+      Média: 48,
+      Baixa: 24,
+      "Muito baixa": 6,
     },
     {
       // Questão 4
-      "Não reciclo nada": 5,
-      "Reciclo papel ou plástico": 3,
-      "Reciclo quase tudo": 2,
+      "Não reciclo nada": 0,
+      "Reciclo papel ou plástico": -10,
+      "Reciclo quase tudo": -20,
+      "Reciclo tudo corretamente": -30,
     },
     {
       // Questão 5
-      "Toda semana": 5,
-      "Todo mês": 3,
-      "A cada 2-3 meses": 2,
+      "Toda semana": 60,
+      "Todo mês": 20,
+      "A cada 2-3 meses": 10,
+      Raramente: 5,
     },
   ];
 
@@ -176,36 +180,36 @@ function posicionar_resposta() {
     novo_lottie.setAttribute("autoplay", "");
     container_lottie.appendChild(novo_lottie);
   }
-  const resposta = calcular_resposta(respostas);
-  if (resposta <= 5) {
+  const resposta = calcular_resposta(respostas) * 12;
+  if (resposta <= 2000) {
     texto.style.color = "#2E7D32";
     nota.style.color = "#4CAF50";
     texto.innerHTML = "EXCELENTE";
-    nota.innerHTML = resposta.toString();
+    nota.innerHTML = resposta;
     frase.innerHTML =
       "Você adota práticas altamente sustentáveis no dia a dia. Continue assim!";
     atualizarLottie("json/great.json");
-  } else if (resposta <= 10) {
+  } else if (resposta <= 3500) {
     texto.style.color = "#2E7D32";
     nota.style.color = "#81C784";
     texto.innerHTML = "BOM";
-    nota.innerHTML = resposta.toString();
+    nota.innerHTML = resposta;
     frase.innerHTML =
       "Seus hábitos são positivos para o meio ambiente, mas ainda há pequenas melhorias possíveis.";
     atualizarLottie("json/good.json");
-  } else if (resposta <= 15) {
+  } else if (resposta <= 5000) {
     texto.style.color = "#FBC02D";
     nota.style.color = "#F9A825";
     texto.innerHTML = "MÉDIO";
-    nota.innerHTML = resposta.toString();
+    nota.innerHTML = resposta;
     frase.innerHTML =
       "Algumas escolhas sustentáveis são feitas, mas há espaço para mudanças que reduzam seu impacto.";
     atualizarLottie("json/meh.json");
-  } else if (resposta <= 20) {
+  } else if (resposta <= 7000) {
     texto.style.color = "#C62828";
     nota.style.color = "#F44336";
     texto.innerHTML = "RUIM";
-    nota.innerHTML = resposta.toString();
+    nota.innerHTML = resposta;
     frase.innerHTML =
       "É importante repensar certos hábitos e buscar alternativas mais sustentáveis.";
     atualizarLottie("json/bad.json");
@@ -213,7 +217,7 @@ function posicionar_resposta() {
     texto.style.color = "#C62828";
     nota.style.color = "#F44336";
     texto.innerHTML = "MUITO RUIM";
-    nota.innerHTML = resposta.toString();
+    nota.innerHTML = resposta;
     frase.innerHTML =
       "Seus hábitos causam grande impacto no meio ambiente. Tente adotar atitudes mais ecológicas.";
     atualizarLottie("json/bad.json");
