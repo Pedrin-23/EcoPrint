@@ -38,7 +38,16 @@
         color: white;
     }
     .sobre{
-        background-color: #2C4F48;
+        backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  
+  background-color: rgba(44, 79, 72, 0.25); 
+
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  color: white; 
         
     }
    
