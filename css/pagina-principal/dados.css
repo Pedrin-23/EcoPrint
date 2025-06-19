@@ -7,6 +7,9 @@
     max-width: 1200px;
     align-items: center;
 }
+.dados-titulo{
+    color: #d4f0ff
+}
 .dados-container img {
     scale: 0.75;
     grid-row: 1;
